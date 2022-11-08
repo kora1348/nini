@@ -4,8 +4,8 @@ import { first } from 'rxjs/operators';
 import { User } from '@app/_models';
 import { UserService } from '@app/_services';
 
-@Component({ templateUrl: 'home.component.html' })
-export class HomeComponent {
+@Component({ templateUrl: 'online.component.html' })
+export class OnlineComponent {
     loading = false;
     users: User[];
 

@@ -1,17 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './views/home';
+import { OnlineComponent } from './views/online';
 import { LoginComponent } from './views/login';
 
 
 import { AuthGuard } from './_helpers';
 
 const routes: Routes = [
-    { path: '', component: HomeComponent, canActivate: [AuthGuard] },
+    { path: '', component: OnlineComponent, canActivate: [AuthGuard] },
     { path: 'login', component: LoginComponent },
-
-    // otherwise redirect to home
-    { path: '**', redirectTo: '' }
+    
 ];
 
 @NgModule({
@@ -19,3 +17,4 @@ const routes: Routes = [
     exports: [RouterModule]
 })
 export class AppRoutingModule { }
+

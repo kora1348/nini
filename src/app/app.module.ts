@@ -10,8 +10,9 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { BasicAuthInterceptor, ErrorInterceptor } from './_helpers';
-import { HomeComponent } from './views/home';
+import { OnlineComponent } from './views/online';
 import { LoginComponent } from './views/login';
+
 
 
 @NgModule({
@@ -23,7 +24,7 @@ import { LoginComponent } from './views/login';
     ],
     declarations: [
         AppComponent,
-        HomeComponent,
+        OnlineComponent,
         LoginComponent
     ],
     providers: [
