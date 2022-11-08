@@ -11,7 +11,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { BasicAuthInterceptor, ErrorInterceptor } from './_helpers';
 import { OnlineComponent } from './views/online';
-import { SigninComponent } from './views/signin/signin.component';
+import { SigninComponent } from './views/identity/views/signin/signin.component';
+
 
 
 

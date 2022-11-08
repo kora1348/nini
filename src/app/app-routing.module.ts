@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { SigninComponent } from './views/identity/views/signin/signin.component';
 import { OnlineComponent } from './views/online';
-import { SigninComponent } from './views/signin/signin.component';
+
 
 
 
