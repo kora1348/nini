@@ -2,7 +2,8 @@
 import { first } from 'rxjs/operators';
 
 import { User } from '@app/_models';
-import { UserService } from '@app/_services';
+import { AuthenticationService, UserService } from '@app/_services';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-online',
@@ -12,8 +13,11 @@ import { UserService } from '@app/_services';
 export class OnlineComponent {
     loading = false;
     users: User[];
+    user: User;
 
-    constructor(private userService: UserService) { }
+    constructor(private userService: UserService,  private authenticationService: AuthenticationService, private router: Router) { 
+        this.authenticationService.user.subscribe(x => this.user = x);
+    }
 
     ngOnInit() {
         this.loading = true;
@@ -21,5 +25,9 @@ export class OnlineComponent {
             this.loading = false;
             this.users = users;
         });
+    }
+
+    logout() {
+        this.authenticationService.logout();
     }
 }
