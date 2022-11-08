@@ -1,13 +1,27 @@
-﻿<div class="card mt-4">
-    <h4 class="card-header">You're logged in with Angular 9 & Basic HTTP Authentication!!</h4>
-    <div class="card-body">
-        <h6>Users from secure api end pointssss</h6>
-        <div *ngIf="loading" class="spinner-border spinner-border-sm"></div>
-        <ul *ngIf="users">
-            <li *ngFor="let user of users">{{user.firstName}} {{user.lastName}}</li>
-        </ul>
+﻿<div class="sidebar">
+    <div class="logo-details">
+      <span class="logo_name">
+        <img src="assets/images/1.png" />
+      </span>
     </div>
-</div>
-
-<a class="nav-item nav-link" (click)="logout()">Logoutdd</a>
-<a class="nav-item nav-link" routerLink="/">Home</a>
+  
+    <ul class="nav-links">
+      
+    </ul>
+  </div>
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class="bx bx-menu sidebarBtn" ></i>
+      </div>
+  
+      <div class="menu-summary-container">
+        <span class="user">User: </span>
+        <span class="last-connection">last connection: </span>
+        <a class="nav-item nav-link" (click)="logout()" style="color:red">Logoutdd</a>
+      </div>
+    </nav>
+  
+    <router-outlet></router-outlet>
+  </section>
+  
