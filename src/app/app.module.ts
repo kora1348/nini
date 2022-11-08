@@ -11,7 +11,9 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { BasicAuthInterceptor, ErrorInterceptor } from './_helpers';
 import { OnlineComponent } from './views/online';
-import { LoginComponent } from './views/login';
+import { SigninComponent } from './views/signin/signin.component';
+
+
 
 
 
@@ -25,7 +27,7 @@ import { LoginComponent } from './views/login';
     declarations: [
         AppComponent,
         OnlineComponent,
-        LoginComponent
+        SigninComponent
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: BasicAuthInterceptor, multi: true },
