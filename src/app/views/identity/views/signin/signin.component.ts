@@ -5,7 +5,11 @@ import { first } from 'rxjs/operators';
 
 import { AuthenticationService } from '@app/_services';
 
-@Component({ templateUrl: 'signin.component.html' })
+@Component({
+    selector: 'app-signin',
+    templateUrl: './signin.component.html',
+    styleUrls: ['./signin.component.css'],
+})
 export class SigninComponent implements OnInit {
     loginForm: FormGroup;
     loading = false;

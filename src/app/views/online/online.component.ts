@@ -4,7 +4,11 @@ import { first } from 'rxjs/operators';
 import { User } from '@app/_models';
 import { UserService } from '@app/_services';
 
-@Component({ templateUrl: 'online.component.html' })
+@Component({
+    selector: 'app-online',
+    templateUrl: './online.component.html',
+    styleUrls: ['./online.component.css'],
+})
 export class OnlineComponent {
     loading = false;
     users: User[];
