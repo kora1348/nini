@@ -11,16 +11,13 @@ import { User } from './_models';
 })
 
 export class AppComponent {
-    user: User;
+ 
 
     constructor(
         private router: Router,
-        private authenticationService: AuthenticationService
     ) {
-        this.authenticationService.user.subscribe(x => this.user = x);
+
     }
 
-    logout() {
-        this.authenticationService.logout();
-    }
+    
 }
